@@ -5,12 +5,12 @@ let SeatNumber = 4
 for(seatName of allseatName){
         seatName.addEventListener('click', function(event){
         
+
         event.target.style.backgroundColor = '#1DD100';
         event.target.style.color = '#fff';
         event.target.style.borderRadius = '6px';
-        event.target.style.cursor = 'not-allowed';
-        event.target.style.pointerEvents = 'none';
-        
+        // event.target.style.cursor = 'not-allowed';
+        // event.target.style.pointerEvents = 'none';
     
         selectSeatNumber = selectSeatNumber + 1;
         setInnerText('select-seat-number', selectSeatNumber)
@@ -77,12 +77,7 @@ for(seatName of allseatName){
         })
 
 
-        const phone = document.getElementById('phone');
-        const submitButton = document.getElementById('submit-btn')
-        submitButton.querySelector('click', function(){
-            event.par
-        })
-
+       
       
       
 
@@ -91,6 +86,13 @@ for(seatName of allseatName){
 }
 
 
+const mainContent = document.getElementById('main-content')
+const submitButton = document.getElementById('submit-btn')
+console.log(submitButton);
+
+submitButton.querySelector('click', function(){
+    mainContent.style.display= 'none'
+})
 
 
 function setInnerText(id,value){
@@ -106,6 +108,15 @@ function getTextElementValueById(elementId){
     return value;
 }
 
+function hideElementById(elementId) {
+    const element = document.getElementById(elementId);
+    element.classList.add('hidden');
+}
+
+function showElementById(elementId) {
+    const element = document.getElementById(elementId);
+    element.classList.remove('hidden');
+}
 
 
 // const selectSeatNumber = getTextElementValueById('current-life');

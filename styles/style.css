@@ -1,3 +1,30 @@
+body {
+  position: relative;
+  font-family: "Inter", sans-serif;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.mulish {
+  font-family: "Mulish", sans-serif;
+}
+.inter {
+  font-family: "Inter", sans-serif;
+}
+
+.container {
+  width: 80%;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+img {
+  vertical-align: middle;
+}
+a {
+  text-decoration: none;
+}
 button {
   padding: 10px 30px !important;
 }
@@ -32,6 +59,24 @@ td:first-child {
 }
 
 .disabled {
-  cursor : 'not-allowed';
-  pointer-events: 'none';
+  cursor: "not-allowed";
+  pointer-events: "none";
+}
+.hidden {
+  display: none;
+}
+.submit-success-content {
+  width: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Adjust as needed */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Adjust shadow values as needed */
+}
+.section-title {
+  color: var(--black-color);
+  text-align: center;
+  font-family: Mulish;
+  font-size: 2.5rem;
+  font-weight: 800;
 }
