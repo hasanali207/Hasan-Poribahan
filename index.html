@@ -18,12 +18,13 @@
     <main>
       <section>
         <h1 id="ticket-price">550</h1>
+        <h1>Available <span id="available-seat">5</span></h1>
       </section>
     </main>
     <section class="mt-11">
       <div class="container">
-        <div class="seat-section-wrapper flex space-x-5">
-          <div class="seat-section-left">
+        <div class="seat-section-wrapper flex space-x-5 flex-col lg:flex-row">
+          <div class="seat-section-left w-full lg:w-3/4">
             <h1 class="text-xl mb-3 text-[#030712] font-semibold">
               Select Your Seat
             </h1>
@@ -54,7 +55,8 @@
               </tr>
             </table>
           </div>
-          <div class="seat-section-right">
+          <div> <hr> </div>
+          <div class="seat-section-right w-full lg:w-1/2">
             <h1 class="text-xl mb-3 text-[#030712] font-semibold">
               Select Your Seat
             </h1>
@@ -82,18 +84,19 @@
               class="flex justify-between space-x-14 border-t-2 border-dashed mt-4 pt-2"
             >
               <p class="text-[#030712] font-semibold">Total Price</p>
-              <p class="text-[#030712] font-semibold">BDT <span id="tatal-cost">0</span></p>
+              <p class="text-[#030712] font-semibold">BDT <span id="total-cost">0</span></p>
             </div>
-            <div class="flex py-6 space-x-4">
+            <div id="coupon-code-area" class="flex py-6 space-x-4">
               <input
                 type="text"
                 name="price"
-                id="price"
+                id="discount-code"
                 class="block w-full rounded-md border-0 py-1.5 pl-7 pr-20 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 sm:text-sm sm:leading-6"
                 placeholder="Have Any Coupon?"
               />
 
               <input
+              id="calculate-btn"
                 class="bg-green-600 text-white cursor-pointer px-6 py-2"
                 type="submit"
                 value="Apply"
@@ -103,7 +106,7 @@
               class="flex justify-between space-x-14 border-t-2 border-dashed mt-4 pt-2"
             >
               <p class="text-[#030712] font-semibold">Grand Total</p>
-              <p class="text-[#030712] font-semibold">BDT 0</p>
+              <p class="text-[#030712] font-semibold">BDT <span id="grand-total">0</span> </p>
             </div>
             <form class="p-4">
               <div class="mb-4">
@@ -128,6 +131,7 @@
                 >
                 <input
                   type="number"
+                  required
                   id="phone"
                   name="number"
                   class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
@@ -149,7 +153,8 @@
                 />
               </div>
               <button
-                type="submit"
+                type="submit" 
+                id="submit-btn"
                 class="w-full bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded"
               >
                 Submit
@@ -157,6 +162,7 @@
             </form>
           </div>
         </div>
+
       </div>
     </section>
 

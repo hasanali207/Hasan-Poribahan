@@ -19,7 +19,7 @@ td:first-child {
   margin: 0;
 }
 .container {
-  max-width: 1140px;
+  max-width: 1200px;
   margin: auto;
 }
 .seat-name-top {
@@ -29,4 +29,9 @@ td:first-child {
 .seat-section-right {
   border-left: 2px dashed gray;
   padding-left: 20px;
+}
+
+.disabled {
+  cursor : 'not-allowed';
+  pointer-events: 'none';
 }
